@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border p-0 m-0 font-inter scrollbar-primary;
+  }
+
+  ::selection {
+    @apply bg-primary-accent;
+  }
+
+  html,
+  body {
+    @apply w-full h-full;
+  }
+
+  .toggle-checkbox {
+    @apply hidden;
+  }
+
+  .loader {
+    @apply grid justify-center items-center h-screen;
+  }
+
+  .navbar {
+    @apply z-[1000] sticky top-0 bg-light-default text-dark-default dark:bg-dark-default dark:text-light-default
+  }
+
+  .danger-arrow-top {
+    @apply relative after:top-[-19px] after:border-b-[10px] after:border-b-[#fed7d7] after:border-solid;
+  }
+
+  .danger-arrow-top:before,
+  .danger-arrow-top:after {
+    @apply content-[""] absolute border-t-transparent border-b-[#fc8181] border-x-transparent border-solid border-[10px] left-2.5 -top-5;
+  }
+
+  .danger-arrow-bottom {
+    @apply relative after:bottom-[-19px] after:border-t-[10px] after:border-t-[#fed7d7] after:border-solid;
+  }
+
+  .danger-arrow-bottom:before,
+  .danger-arrow-bottom:after {
+    @apply content-[""] absolute translate-x-[-0%] border-t-[#fc8181] border-b-transparent border-x-transparent border-solid border-[10px] left-2.5 -bottom-5;
+  }
+
+  .danger-arrow-right {
+    @apply relative after:right-[-19px] after:border-l-[10px] after:border-l-[#fed7d7] after:border-solid;
+  }
+
+  .danger-arrow-right:before,
+  .danger-arrow-right:after {
+    @apply content-[""] absolute -translate-y-2/4 border-l-[#fc8181] border-r-transparent border-y-transparent border-solid border-[10px] -right-5 top-[30%];
+  }
+
+  .danger-arrow-left {
+    @apply relative after:left-[-19px] after:border-r-[10px] after:border-r-[#fed7d7] after:border-solid;
+  }
+
+  .danger-arrow-left:before,
+  .danger-arrow-left:after {
+    @apply content-[""] absolute -translate-y-2/4 border-l-transparent border-r-[#fc8181] border-y-transparent border-solid border-[10px] -left-5 top-[30%];
+  }
+}
