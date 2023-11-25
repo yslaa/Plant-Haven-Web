@@ -28,7 +28,6 @@ export default function () {
       Array.from(values?.image).forEach((file) => {
         formData.append("image", file);
       });
-      console.log("Form Data:", formData);
       updateComment({ id: data?.details?._id, payload: formData }).then(
         (response) => {
           const toastProps = {

@@ -31,7 +31,6 @@ export default function () {
         autoClose: 3000,
       });
     } catch (error) {
-      console.log(error);
       toast.error("Error Logging Out", {
         position: toast.POSITION.TOP_RIGHT,
         autoClose: 3000,

@@ -26,7 +26,6 @@ export default function () {
       formData.append("ratings", values?.ratings);
       formData.append("text", values?.text);
       formData.append("transaction", values?.transaction);
-      console.log(values?.transaction);
 
       Array.from(values?.image).forEach((file) => {
         formData.append("image", file);
